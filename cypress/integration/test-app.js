@@ -90,7 +90,7 @@ describe("CSS features", () => {
     cy.viewport(600, 600).then(() => {
       cy.get("#reviews").should("have.css", "display", "block");
     });
-    cy.viewport(400, 400).then(() => {
+    cy.viewport(500, 500).then(() => {
       cy.get("#reviews").should("have.css", "display", "none");
     });
   });

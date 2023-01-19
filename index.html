@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 2 Assessment Christian Orlando</title>
+    <link href=' http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+    <script src="./main.js" defer></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <img src="./images/ghibli-logo.png" alt="Ghibli logo">
+        <h1>Ghibli Review App</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Select a movie</h2>
+            <div  id="divtitle"> </div>
+        </section>
+
+        <section>
+            <h2>Add a review</h2>
+            <form action="">
+                <label for="review">Your review <span class="required">*</span></label><br>
+                <input id="review" name="review" type="text" required /><br>
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+
+        <section>
+            <h3>Movie details</h3>
+            <div id="display-info"></div>
+            
+        </section>
+
+        <section>
+            <h2>People</h2>
+            <ol></ol>
+            <button id="show-people">Show People</button>
+        </section>
+
+        <section id="reviews" >
+            <h2 class="bveamos">Reviews</h2>
+            <ul class="bveamos"></ul>
+            <button id="reset-reviews" class="bveamos">Reset Reviews</button>
+        </section>
+    </main>
+    
+</body>
+</html>
