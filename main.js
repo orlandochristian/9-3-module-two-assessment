@@ -82,7 +82,7 @@ function loadoneFilm(peli) {
   let pelicula = peliculas.find(x => x.title === peli)
   let detail = document.getElementById("display-info")
   
-  const h3 = document.createElement("h3")
+  const h3 = document.createElement("h2")
   h3.setAttribute("class","borra")
   h3.textContent = "Original Title: " + pelicula.title
   
