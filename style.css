@@ -1,9 +1,11 @@
+
 body {
     background-color: rgb(230, 230, 250);
     font-family: monospace;
    display: flex;
    flex-direction: column;
    align-items:center;
+   
   
 }
 
@@ -19,6 +21,10 @@ header {
     
 }
 
+section h2 {
+    text-align: center;
+}
+
 header img {
     width: 250px;
 }
@@ -29,18 +35,23 @@ flex-direction: column;
 align-items: center;
 
 }
-section#reviews { display: none;}
+
 
 form {
     display: flex;
     gap: 10px;
 }
 
-@media  (max-height: 500px) {
-    .bveamos {
+
+
+@media (max-width:500px) {
+    #reviews {
         display: none;
     }
-    
+}
+
+.required {
+    color: red;
 }
 
 
