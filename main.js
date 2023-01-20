@@ -49,6 +49,7 @@ document.getElementById("show-people").addEventListener("click",() => {
     
          //delete ol's li
           //for (const li of document.querySelectorAll(".lis2")) {li.remove(); }    
+         
           fetch('https://resource-ghibli-api.onrender.com/people')
           .then((res) => { 
             return res.json();
@@ -59,8 +60,7 @@ document.getElementById("show-people").addEventListener("click",() => {
               armarOL(peliculas.find((peli) => peli.title === movieqesta).people)
            }) 
            .catch() 
-          
-         // llamar a armarOL con el array de people para poner todos los li inside the ol
+        
          
          }
     })
@@ -112,10 +112,10 @@ function loadoneFilm(peli) {
 
 }
 
-function armarOL (actores) {
+function armarOL (celebrities) {
     const ol = document.querySelector("ol")
     
-    actores.map((actor) => {
+    celebrities.map((actor) => {
         let bioDetail = personas.find((bio) => bio.id === actor.slice(8))
         if (bioDetail != undefined) { 
         const li = document.createElement("li")
@@ -152,17 +152,17 @@ function fetchFilms() {
        .catch() 
 }
 
-function fetchPeople() {
-    fetch('https://resource-ghibli-api.onrender.com/people')
-    .then((res) => { 
-      return res.json();
-     })
-     .then( (people) => {
-        //here assign the Promise to a global scope variable named "personas" (persona=[] at line 11) 
-        personas = people
-     }) 
-     .catch() 
-}
+// function fetchPeople() {
+//     fetch('https://resource-ghibli-api.onrender.com/people')
+//     .then((res) => { 
+//       return res.json();
+//      })
+//      .then( (people) => {
+//         //here assign the Promise to a global scope variable named "personas" (persona=[] at line 11) 
+//         personas = people
+//      }) 
+//      .catch() 
+// }
 
 //-----------------------------------------------********------------------------------------------------------------------
 //-------------------------------------------------------------------------------------------------------------------------
